@@ -149,4 +149,34 @@ public class PositionTest {
         Position target = Position.parsePosition("X . .\n. O .\n. . X", 1);
         assertEquals("1,-1,-1\n-1,0,-1\n-1,-1,1", target.toString());
     }
+
+    // ----------------- Tests to evaluate() heuristic ------------------
+
+    @Test
+    public void testEvaluateEmptyGrid() {
+        Position pos = Position.parsePosition(". . .\n. . .\n. . .", -1);
+        int score = pos.evaluate(0); // For either player, it should be neutral
+        assertEquals(1, score); // Default draw score
+    }
+
+    @Test
+    public void testEvaluateWin() {
+        Position pos = Position.parsePosition("X X X\n. O .\n. . O", 1);
+        int score = pos.evaluate(1);
+        assertEquals(2, score); // Should return win score
+    }
+
+    @Test
+    public void testEvaluateDraw() {
+        Position pos = Position.parsePosition("X 0 X\nX X 0\n0 X 0", 1);
+        int score = pos.evaluate(1);
+        assertEquals(1, score); // Should return draw score
+    }
+
+    @Test
+    public void testEvaluateLoss() {
+        Position pos = Position.parsePosition("0 0 0\nX X .\n. . X", 0);
+        int score = pos.evaluate(1);
+        assertEquals(0, score); // Loss for player X
+    }
 }
