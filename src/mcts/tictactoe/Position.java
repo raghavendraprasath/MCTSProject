@@ -22,7 +22,7 @@ public class Position {
      * @param last the last player.
      * @return a Position.
      */
-    static Position parsePosition(final String grid, final int last) {
+    public static Position parsePosition(final String grid, final int last) {
         int[][] matrix = new int[gridSize][gridSize];
         int count = 0;
         String[] rows = grid.split("\\n", gridSize);
@@ -64,9 +64,8 @@ public class Position {
         if (player == last) throw new RuntimeException("consecutive moves by same player: " + player);
         int[][] matrix = copyGrid();
         if (matrix[x][y] < 0) {
-            // TO BE IMPLEMENTED 
-             return null;
-            // END SOLUTION
+            matrix[x][y] = player;
+            return new Position(matrix, count + 1, player);
         }
         throw new RuntimeException("Position is occupied: " + x + ", " + y);
     }
@@ -82,16 +81,12 @@ public class Position {
         for (int i = 0; i < gridSize; i++)
             for (int j = 0; j < gridSize; j++)
                 if (grid[i][j] < 0)
-                    // TO BE IMPLEMENTED 
-         ;
-        // END SOLUTION
+                    result.add(new int[]{i, j});
         return result;
     }
 
     /**
      * Method to yield a copy of this Position but reflected.
-     * <p>
-     * TESTME
      *
      * @param axis the axis about which to reflect.
      * @return a new Position.
@@ -113,7 +108,6 @@ public class Position {
 
     /**
      * Method to rotate this Position by 90 degrees clockwise.
-     * TESTME
      *
      * @return a new Position which is rotated from this.
      */
@@ -137,16 +131,17 @@ public class Position {
 
     /**
      * Method to determine if this Position has three in a row (i.e. a winning position).
-     * Don't forget to check for columns and diagonals as well.
-     * <p>
-     * NOTE: you may find the instance field xxx to be useful, as well as the projectRow, projectCol, etc. private methods.
      *
      * @return true if there are three cells in a line that are the same and equal to the last player.
      */
     boolean threeInARow() {
-        // TO BE IMPLEMENTED 
-         return false;
-        // END SOLUTION
+        for (int i = 0; i < gridSize; i++) {
+            if (Arrays.equals(projectRow(i), xxx)) return true;
+            if (Arrays.equals(projectCol(i), xxx)) return true;
+        }
+        if (Arrays.equals(projectDiag(true), xxx)) return true;
+        if (Arrays.equals(projectDiag(false), xxx)) return true;
+        return false;
     }
 
     /**
@@ -155,7 +150,7 @@ public class Position {
      * @param i the row index.
      * @return an array of three ints.
      */
-    int[] projectRow(int i) {
+    public int[] projectRow(int i) {
         return grid[i];
     }
 
@@ -190,7 +185,7 @@ public class Position {
     /**
      * @return true if this Position has 9 elements.
      */
-    boolean full() {
+    public boolean full() {
         return count == 9;
     }
 
@@ -258,6 +253,55 @@ public class Position {
         };
     }
 
+    public int evaluate(int player) {
+        // Winning state
+        if (winner().isPresent()) {
+            int winner = winner().get();
+            if (winner == player) return 2;     // Win
+            else return 0;                      // Loss
+        }
+
+        if (full()) return 1; // Draw
+
+        int score = 1; // default draw score (as in empty or intermediate state)
+
+        // Center control
+        if (grid[1][1] == player) score += 3;
+
+        // Corner control
+        int[][] corners = {{0, 0}, {0, 2}, {2, 0}, {2, 2}};
+        for (int[] corner : corners) {
+            if (grid[corner[0]][corner[1]] == player) score += 1;
+        }
+
+        // Rows, columns, diagonals
+        for (int i = 0; i < 3; i++) {
+            score += evaluateLine(projectRow(i), player);
+            score += evaluateLine(projectCol(i), player);
+        }
+        score += evaluateLine(projectDiag(true), player);
+        score += evaluateLine(projectDiag(false), player);
+
+        return score;
+    }
+
+
+    private int evaluateLine(int[] line, int player) {
+        int playerCount = 0;
+        int emptyCount = 0;
+        int opponent = 1 - player;
+
+        for (int cell : line) {
+            if (cell == player) playerCount++;
+            else if (cell == -1) emptyCount++;
+        }
+
+        if (playerCount == 2 && emptyCount == 1) return 10;     // Offensive opportunity
+        if (playerCount == 0 && emptyCount == 1) return -5;     // Opponent dominance
+        return 0;
+    }
+
+
     /**
      * TESTME
      *
@@ -272,6 +316,11 @@ public class Position {
         matrix[i1][j1] = matrix[i2][j2];
         matrix[i2][j2] = temp;
     }
+
+    public int getLastPlayer() {
+        return last;
+    }
+
 
     private final int[][] grid;
     final int last;
