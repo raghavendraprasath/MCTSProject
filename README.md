@@ -44,6 +44,11 @@ MCTSProject/
 
 Video has been included in repo for demo of game
 
+### 📽️ Demo Video
+
+👉 [Watch Tic Tac Toe with MCTS – Java Project Walkthrough](https://github.com/raghavendraprasath/MCTSProject/blob/main/Tic%20Tac%20Toe%20with%20MCTS%20%E2%80%93%20Java%20Project%20Walkthrough.mp4)
+
+
 ### Prerequisites  
 - Java 17+
 
