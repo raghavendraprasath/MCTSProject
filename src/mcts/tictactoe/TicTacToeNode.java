@@ -102,4 +102,13 @@ public class TicTacToeNode implements Node<TicTacToe> {
 
     private int wins;
     private int playouts;
+
+    public void setWins(int wins) {
+        this.wins = wins;
+    }
+
+    public void setPlayouts(int playouts) {
+        this.playouts = playouts;
+    }
+
 }
