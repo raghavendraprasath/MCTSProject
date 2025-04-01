@@ -59,7 +59,7 @@ Video has been included in repo for demo of game
 git clone https://github.com/your-username/MCTSProject.git  
 cd MCTSProject  
 ```  
-> Alternatively, you can open the project in IntelliJ, Eclipse, or VS Code with Maven support and run the `WelcomeScreen.java` file directly.  
+2. After that, you can open the project folder in IntelliJ, Eclipse, or VS Code with Maven support and run the `WelcomeScreen.java` file directly to run the game.  
 
 ## 🧪 Testing and Validation  
 We thoroughly tested the implementation using:  
