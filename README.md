@@ -123,7 +123,7 @@ We also implemented detailed logging and observation for MCTS decision-making (v
 - ✅ Added custom test cases for validation  
 - ✅ Measured performance and documented AI behavior  
 - ✅ README and report include setup and explanation  
-- 📽️ Demo video to be included in final deliverables  
+- 📽️ Demo video included
 
 ## 📜 License  
 This repository is created for academic coursework and is not licensed for commercial use. Contact the authors for permission to reuse or contribute.
