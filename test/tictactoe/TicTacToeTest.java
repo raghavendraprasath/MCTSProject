@@ -1,18 +1,16 @@
 package com.phasmidsoftware.dsaipg.projects.mcts.tictactoe;
 
+import com.phasmidsoftware.dsaipg.projects.mcts.core.Node;
 import com.phasmidsoftware.dsaipg.projects.mcts.core.State;
 import org.junit.Test;
 
 import java.util.Optional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
+
 
 public class TicTacToeTest {
 
-    /**
-     *
-     */
     @Test
     public void runGame() {
         long seed = 0L;
@@ -21,5 +19,34 @@ public class TicTacToeTest {
         Optional<Integer> winner = state.winner();
         if (winner.isPresent()) assertEquals(Integer.valueOf(TicTacToe.X), winner.get());
         else fail("no winner");
+    }
+
+    /**
+     * Additional: Verify a different seed produces a valid state with a winner or draw.
+     */
+    @Test
+    public void testRunGameWithDifferentSeed() {
+        long seed = 42L;
+        TicTacToe target = new TicTacToe(seed);
+        State<TicTacToe> state = target.runGame();
+        assertTrue(state.isTerminal());
+        assertNotNull(state.toString());
+    }
+
+    /**
+     * Additional: Test Hard mode MCTS outcome from known initial state.
+     */
+    @Test
+    public void testHardModeMCTSOutput() {
+        TicTacToe game = new TicTacToe(99L);
+        State<TicTacToe> state = game.start();
+
+        Node<TicTacToe> root = new TicTacToeNode(state);
+        MCTS mcts = new MCTS(root, 500); // hard mode with heuristics
+        Node<TicTacToe> result = mcts.runSearch();
+
+        assertNotNull(result);
+        assertNotNull(result.state());
+        assertFalse(result.state().isTerminal()); // Should not be terminal after 1 move
     }
 }

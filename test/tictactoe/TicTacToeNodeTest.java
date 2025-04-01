@@ -1,9 +1,11 @@
 package com.phasmidsoftware.dsaipg.projects.mcts.tictactoe;
 
+import com.phasmidsoftware.dsaipg.projects.mcts.core.State;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import java.util.Collection;
+
+import static org.junit.Assert.*;
 
 public class TicTacToeNodeTest {
 
@@ -32,16 +34,43 @@ public class TicTacToeNodeTest {
 
     @Test
     public void children() {
-        // no tests yet
+        TicTacToe.TicTacToeState state = new TicTacToe().new TicTacToeState();
+        TicTacToeNode node = new TicTacToeNode(state);
+        assertNotNull(node.children());
+        assertEquals(0, node.children().size()); // Should be empty initially
     }
 
     @Test
     public void addChild() {
-        // no tests yet
+        TicTacToe game = new TicTacToe();
+        State<TicTacToe> state = game.start();
+        TicTacToeNode node = new TicTacToeNode(state);
+
+        for (var move : state.moves(state.player())) {
+            State<TicTacToe> childState = state.next(move);
+            node.addChild(childState);
+        }
+
+        Collection<?> children = node.children();
+        assertFalse(children.isEmpty());
     }
 
     @Test
     public void backPropagate() {
-        // no tests yet
+        TicTacToe game = new TicTacToe();
+        State<TicTacToe> state = game.start();
+        TicTacToeNode node = new TicTacToeNode(state);
+
+        for (var move : state.moves(state.player())) {
+            State<TicTacToe> childState = state.next(move);
+            TicTacToeNode childNode = new TicTacToeNode(childState);
+            childNode.setWins(2);      // Simulate 1 win
+            childNode.setPlayouts(1);  // Simulate 1 playout
+            node.children().add(childNode);
+        }
+
+        node.backPropagate();
+        assertEquals(node.children().size(), node.playouts());
+        assertEquals(2 * node.children().size(), node.wins());
     }
 }
