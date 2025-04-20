@@ -1,11 +1,10 @@
 package com.phasmidsoftware.dsaipg.projects.mcts.tictactoe;
 
 import com.phasmidsoftware.dsaipg.projects.mcts.core.State;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
 
 public class TicTacToeNodeTest {
 

@@ -1,33 +1,33 @@
 package com.phasmidsoftware.dsaipg.projects.mcts.tictactoe;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PositionTest {
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void testMove_2() {
         String grid = "X . .\n. O .\n. . X";
         Position target = Position.parsePosition(grid, 1);
-        target.move(1, 0, 0);
+        assertThrows(RuntimeException.class, () -> target.move(1, 0, 0));
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void testMove_1() {
         String grid = "X X 0\nX O 0\nX X 0";
         Position target = Position.parsePosition(grid, 1);
-        target.move(1, 0, 0);
+        assertThrows(RuntimeException.class, () -> target.move(1, 0, 0));
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void testMove0() {
         String grid = "X . .\n. O .\n. . X";
         Position target = Position.parsePosition(grid, 1);
-        target.move(1, 0, 1);
+        assertThrows(RuntimeException.class, () -> target.move(1, 0, 1));
     }
 
     @Test
@@ -54,14 +54,6 @@ public class PositionTest {
     }
 
     @Test
-    public void testReflect() {
-    }
-
-    @Test
-    public void testRotate() {
-    }
-
-    @Test
     public void testWinner0() {
         String grid = "X . .\n. O .\n. . X";
         Position target = Position.parsePosition(grid, 1);
@@ -79,7 +71,7 @@ public class PositionTest {
 
     @Test
     public void testWinner2() {
-        String grid = "0 . X\n0 X .\nO . X";
+        String grid = "0 . X\n0 X .\n0 . X";
         Position target = Position.parsePosition(grid, 0);
         Optional<Integer> winner = target.winner();
         assertTrue(winner.isPresent());
@@ -150,33 +142,33 @@ public class PositionTest {
         assertEquals("1,-1,-1\n-1,0,-1\n-1,-1,1", target.toString());
     }
 
-    // ----------------- Tests to evaluate() heuristic ------------------
+    // ----------------- evaluate() tests ------------------
 
     @Test
     public void testEvaluateEmptyGrid() {
         Position pos = Position.parsePosition(". . .\n. . .\n. . .", -1);
-        int score = pos.evaluate(0); // For either player, it should be neutral
-        assertEquals(1, score); // Default draw score
+        int score = pos.evaluate(0);
+        assertEquals(1, score); // Neutral/draw
     }
 
     @Test
     public void testEvaluateWin() {
         Position pos = Position.parsePosition("X X X\n. O .\n. . O", 1);
         int score = pos.evaluate(1);
-        assertEquals(2, score); // Should return win score
+        assertEquals(2, score); // Win
     }
 
     @Test
     public void testEvaluateDraw() {
         Position pos = Position.parsePosition("X 0 X\nX X 0\n0 X 0", 1);
         int score = pos.evaluate(1);
-        assertEquals(1, score); // Should return draw score
+        assertEquals(1, score); // Draw
     }
 
     @Test
     public void testEvaluateLoss() {
         Position pos = Position.parsePosition("0 0 0\nX X .\n. . X", 0);
         int score = pos.evaluate(1);
-        assertEquals(0, score); // Loss for player X
+        assertEquals(0, score); // Loss
     }
 }
