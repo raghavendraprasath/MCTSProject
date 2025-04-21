@@ -2,7 +2,7 @@
  * Copyright (c) 2024. Robin Hillyard
  */
 
-package com.phasmidsoftware.dsaipg.projects.mcts.core;
+package core;
 
 /**
  * This interface defines the behavior of a Move in a Game.

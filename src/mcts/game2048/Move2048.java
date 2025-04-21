@@ -1,6 +1,6 @@
-package com.phasmidsoftware.dsaipg.projects.mcts.game2048;
+package game2048;
 
-import com.phasmidsoftware.dsaipg.projects.mcts.core.Move;
+import core.Move;
 
 public enum Move2048 implements Move<Game2048> {
     UP, DOWN, LEFT, RIGHT;

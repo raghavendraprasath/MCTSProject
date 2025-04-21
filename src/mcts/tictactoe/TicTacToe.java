@@ -2,11 +2,11 @@
  * Copyright (c) 2024. Robin Hillyard
  */
 
-package com.phasmidsoftware.dsaipg.projects.mcts.tictactoe;
+package tictactoe;
 
-import com.phasmidsoftware.dsaipg.projects.mcts.core.Game;
-import com.phasmidsoftware.dsaipg.projects.mcts.core.Move;
-import com.phasmidsoftware.dsaipg.projects.mcts.core.State;
+import core.Game;
+import core.Move;
+import core.State;
 
 import java.util.*;
 

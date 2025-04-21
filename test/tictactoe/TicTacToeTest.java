@@ -1,7 +1,7 @@
-package com.phasmidsoftware.dsaipg.projects.mcts.tictactoe;
+package tictactoe;
 
-import com.phasmidsoftware.dsaipg.projects.mcts.core.Node;
-import com.phasmidsoftware.dsaipg.projects.mcts.core.State;
+import core.Node;
+import core.State;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Optional;

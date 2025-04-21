@@ -1,6 +1,6 @@
-package com.phasmidsoftware.dsaipg.projects.mcts.game2048;
+package game2048;
 
-import com.phasmidsoftware.dsaipg.projects.mcts.core.*;
+import core.*;
 
 import java.util.*;
 

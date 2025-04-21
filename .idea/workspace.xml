@@ -5,40 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb645551-74ee-4e78-a675-dc521adec50c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCTSProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MCTSProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/phasmidsoftware/dsaipg/adt/bqs/UnorderedIterator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/core/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/core/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/core/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/core/RandomState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/core/State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Game2048.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Game2048GUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Game2048GUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Game2048Runner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/MCTS2048.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Move2048.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/State2048$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/State2048.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/WelcomeScreen2048$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/game2048/WelcomeScreen2048.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/MCTS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/Position.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToe$TicTacToeMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToe$TicTacToeState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToeGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/WelcomeScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCTSProject/com/phasmidsoftware/dsaipg/projects/projects.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/MCTSProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/core/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/core/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/core/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/core/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/core/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/core/RandomState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/core/RandomState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/core/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/core/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/game2048/Game2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/game2048/Game2048.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/game2048/Game2048GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/game2048/Game2048GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/game2048/Game2048Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/game2048/Game2048Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/game2048/MCTS2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/game2048/MCTS2048.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/game2048/Move2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/game2048/Move2048.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/game2048/State2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/game2048/State2048.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/game2048/WelcomeScreen2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/game2048/WelcomeScreen2048.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/tictactoe/MCTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/tictactoe/MCTS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/tictactoe/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/tictactoe/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/tictactoe/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/tictactoe/TicTacToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/tictactoe/TicTacToeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/tictactoe/TicTacToeGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/tictactoe/TicTacToeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/tictactoe/TicTacToeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mcts/tictactoe/WelcomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mcts/tictactoe/WelcomeScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/core/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/core/Move.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/core/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/core/RandomState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/core/State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Game2048.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Game2048GUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Game2048GUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Game2048Runner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/MCTS2048.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Move2048.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/State2048$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/State2048.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/WelcomeScreen2048$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/WelcomeScreen2048.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/MCTS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToe$TicTacToeMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToe$TicTacToeState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToeGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/WelcomeScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/projects.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phasmidsoftware/dsaipg/projects/mcts/core/RandomStateTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Game2048Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/MCTS2048Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/Move2048Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phasmidsoftware/dsaipg/projects/mcts/game2048/State2048Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/MCTSTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/PositionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToeNodeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phasmidsoftware/dsaipg/projects/mcts/tictactoe/TicTacToeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/RandomStateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/core/RandomStateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/game2048/Game2048Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/game2048/Game2048Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/game2048/MCTS2048Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/game2048/MCTS2048Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/game2048/Move2048Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/game2048/Move2048Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/game2048/State2048Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/game2048/State2048Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/tictactoe/MCTSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/tictactoe/MCTSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/tictactoe/PositionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/tictactoe/PositionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/tictactoe/TicTacToeNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/tictactoe/TicTacToeNodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/tictactoe/TicTacToeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/tictactoe/TicTacToeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,46 +90,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Game2048Runner.executor": "Run",
-    "Application.WelcomeScreen.executor": "Run",
-    "JUnit.Game2048Test.executor": "Run",
-    "JUnit.MCTS2048Test.executor": "Run",
-    "JUnit.MCTSTest.executor": "Run",
-    "JUnit.Move2048Test.executor": "Run",
-    "JUnit.PositionTest.executor": "Run",
-    "JUnit.RandomStateTest.executor": "Run",
-    "JUnit.State2048Test.executor": "Run",
-    "JUnit.TicTacToeNodeTest.executor": "Run",
-    "JUnit.TicTacToeTest.executor": "Run",
-    "Maven.MCTSProject [clean].executor": "Run",
-    "Maven.MCTSProject [compile].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/adity/Pictures/PSAProject/MCTSProject",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Game2048Runner.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WelcomeScreen.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Game2048Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MCTS2048Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MCTSTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Move2048Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PositionTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RandomStateTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.State2048Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TicTacToeNodeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TicTacToeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MCTSProject [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MCTSProject [compile].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adity/Desktop/Project/MCTSProject&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="MCTSProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="MCTSProject" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-  </component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fb645551-74ee-4e78-a675-dc521adec50c" name="Changes" comment="" />

@@ -1,4 +1,4 @@
-package com.phasmidsoftware.dsaipg.projects.mcts.game2048;
+package game2048;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package com.phasmidsoftware.dsaipg.projects.mcts.tictactoe;
+package tictactoe;
 
 import javax.swing.*;
 import java.awt.*;

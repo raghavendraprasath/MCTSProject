@@ -1,4 +1,4 @@
-package com.phasmidsoftware.dsaipg.projects.mcts.core;
+package core;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

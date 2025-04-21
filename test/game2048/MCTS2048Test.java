@@ -1,7 +1,12 @@
-package com.phasmidsoftware.dsaipg.projects.mcts.game2048;
+package game2048;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import game2048.MCTS2048;
+import game2048.State2048;
+import game2048.Move2048;
+import game2048.Game2048;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
