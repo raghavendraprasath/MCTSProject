@@ -1,6 +1,5 @@
 # MCTSProject – Tic Tac Toe with Monte Carlo Tree Search  
 This repository contains our final team project for **INFO 6205: Program Structures and Algorithms (Spring 2025)** at Northeastern University. We implemented the **Monte Carlo Tree Search (MCTS)** algorithm to intelligently play the game of **Tic Tac Toe**, complete with a full Java GUI and a clean, extendable architecture.  
-> ✅ This version focuses entirely on Tic Tac Toe. A second game will be added in the near future.  
 
 ## 👨‍💻 Contributors  
 - **Raghavendra Prasath Sridhar - (002312779) ** – AI logic, GUI design, move validation, MCTS integration  
@@ -22,22 +21,31 @@ To implement the Monte Carlo Tree Search algorithm from scratch using the provid
 - 🧪 Unit tests for both Tic Tac Toe and MCTS core logic  
 - ⏱ AI move simulation timing and evaluation tracking  
 
-## 📁 Project Structure  
+## 📁 Tic Tac Toe Project Structure
+
 ```
-MCTSProject/  
-│  
-├── src/  
-│   └── main/java/com/phasmidsoftware/dsaipg/projects/mcts/  
-│       ├── core/        # MCTS core framework (Game, Move, Node, State, etc.)  
-│       └── tictactoe/   # Tic Tac Toe-specific implementation  
-│  
-├── test/  
-│   └── java/com/phasmidsoftware/dsaipg/projects/mcts/  
-│       ├── core/        # Unit tests for core logic  
-│       └── tictactoe/   # Unit tests for Tic Tac Toe  
-│  
-├── resources/           # Icons and assets used by the GUI  
-└── README.md
+MCTSProject/
+│
+├── src/
+│   └── main/java/com/phasmidsoftware/dsaipg/projects/mcts/
+│       ├── core/          # MCTS core framework (Game, Move, Node, State, etc.)
+│       └── tictactoe/     # Tic Tac Toe game logic & GUI
+│           ├── WelcomeScreen.java        # Entry point for the game
+│           ├── TicTacToeGUI.java         # Game GUI
+│           ├── TicTacToe.java            # Game logic implementation
+│           ├── Position.java             # Board state representation
+│           └── TicTacToeNode.java        # Node implementation for MCTS
+│
+├── test/
+│   └── java/com/phasmidsoftware/dsaipg/projects/mcts/
+│       ├── core/          # Unit tests for core framework
+│       └── tictactoe/     # Unit tests for Tic Tac Toe
+│           ├── PositionTest.java
+│           ├── TicTacToeNodeTest.java
+│           └── TicTacToeTest.java
+│
+├── resources/             # Icons and GUI assets (optional)
+└── README.md              # Documentation and project guide
 ```  
 
 ## ⚙️ How to Run the Project  
@@ -56,7 +64,7 @@ Video has been included in repo for demo of game
 
 1. **Clone the repository**  
 ```bash  
-git clone https://github.com/your-username/MCTSProject.git  
+git clone https://github.com/raghavendraprasath/MCTSProject.git  
 cd MCTSProject  
 ```  
 2. After that, you can open the project folder in IntelliJ, Eclipse, or VS Code with Maven support and run the `WelcomeScreen.java` file directly to run the game.  
@@ -124,6 +132,119 @@ We also implemented detailed logging and observation for MCTS decision-making (v
 - ✅ Measured performance and documented AI behavior  
 - ✅ README and report include setup and explanation  
 - 📽️ Demo video included
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 🎮 MCTSProject – 2048 with Monte Carlo Tree Search
+
+This section documents the second game implemented as part of our INFO 6205 final project: the single-player puzzle game **2048**, powered by the **Monte Carlo Tree Search (MCTS)** algorithm.
+
+We extended the MCTS framework from our Tic Tac Toe implementation to handle the stochastic nature of 2048, showcasing the versatility of MCTS beyond two-player games.
+
+---
+
+### 🎯 Project Objective
+
+To apply Monte Carlo Tree Search to a single-player environment where moves lead to randomized tile additions and exponential board state complexity. Our AI simulates possible move outcomes and selects the most promising action using `log2(max tile)` as the evaluation function.
+
+---
+
+### 🧠 Core Features
+
+- 🔁 MCTS-based AI that simulates and scores rollouts in real time  
+- 🎮 Interactive 2048 game built with Java Swing  
+- ⌨️ Supports keyboard input (WASD / Arrow keys) for manual play  
+- 🧠 AI autoplay enabled by pressing any key  
+- 📊 Console logs include:
+  - Best move direction  
+  - Max tile reached  
+  - Evaluation score (log2-based)  
+  - Number of rollouts per decision  
+  - Time taken per move  
+- 🧪 Full unit test suite for:
+  - Grid updates and merges  
+  - Tile spawning  
+  - Move validation  
+  - MCTS rollout logic  
+
+---
+
+### 🎨 GUI Highlights
+
+- Responsive 4x4 tile grid  
+- Color-coded tiles based on value  
+- Player name entry at start  
+- Instant visual updates on every move  
+- AI control using the keyboard  
+- Real-time benchmarking logs printed in terminal
+
+---
+
+### 📽️ Demo Video
+
+👉 [Watch 2048 with MCTS – Java Project Walkthrough]()
+
+---
+
+### 🧪 Testing & Validation
+
+- ✅ Validated all `game2048` components with unit tests  
+- ✅ Verified edge case tile merges and move logic  
+- ✅ Tested rollouts under different grid conditions  
+- ✅ Observed and logged performance at each move decision  
+
+---
+
+### 📈 Benchmarking Logs
+
+Example output after every AI move:
+
+```
+Best Move: LEFT  
+Max Tile: 512  
+Evaluation Score: 9.0  
+Simulations: 100  
+Time Taken: 47 ms  
+```
+
+---
+
+### 📁 2048 Project Structure
+
+```
+src/
+└── mcts/
+    └── game2048/
+        ├── Game2048.java       # Game interface implementation
+        ├── State2048.java      # Grid logic, evaluation, spawning, merging
+        ├── Move2048.java       # Enum for directions (UP, DOWN, LEFT, RIGHT)
+        ├── MCTS2048.java       # AI controller for best move prediction
+        └── Game2048GUI.java    # Java Swing GUI for the game
+test/
+└── game2048/
+    ├── State2048Test.java
+    ├── Move2048Test.java
+    ├── Game2048Test.java
+    └── MCTS2048Test.java
+```
+
+---
+
+### 🔮 Future Improvements
+
+- Add animation to tile transitions  
+- Smarter heuristics (e.g., open cell count, merge potential)  
+- Leaderboard to track best scores  
+- Auto-play toggle within GUI  
+- Save and resume game functionality
+
+---
+
+### 📜 Summary
+
+This 2048 implementation demonstrates that MCTS can effectively power strategic decision-making in single-player puzzle games involving randomness and exponential state spaces. With minimal parameter tuning, the AI can consistently reach tiles as high as 1024+ while providing transparent reasoning via logs.
+
 
 ## 📜 License  
 This repository is created for academic coursework and is not licensed for commercial use. Contact the authors for permission to reuse or contribute.
