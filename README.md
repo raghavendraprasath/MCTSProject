@@ -239,10 +239,14 @@ test/
 - Auto-play toggle within GUI  
 - Save and resume game functionality
 
-NOTE: macOS IMKClient Messages:
+NOTE: 
+macOS IMKClient Messages:
 When running the 2048 Java GUI application on macOS, you might see terminal messages like:
+
 +[IMKClient subclass]: chose IMKClient_Modern  
+
 +[IMKInputSession subclass]: chose IMKInputSession_Modern
+
 These are informational logs from macOS related to its input system (used for international keyboard support) and do not affect functionality or performance. They can be safely ignored.
 
 ---
